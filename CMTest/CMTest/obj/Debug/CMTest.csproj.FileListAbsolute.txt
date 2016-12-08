@@ -1,0 +1,5 @@
+c:\users\bboyter\documents\visual studio 2012\Projects\CMTest\CMTest\bin\Debug\CMTest.exe.config
+c:\users\bboyter\documents\visual studio 2012\Projects\CMTest\CMTest\bin\Debug\CMTest.exe
+c:\users\bboyter\documents\visual studio 2012\Projects\CMTest\CMTest\bin\Debug\CMTest.pdb
+c:\users\bboyter\documents\visual studio 2012\Projects\CMTest\CMTest\obj\Debug\CMTest.exe
+c:\users\bboyter\documents\visual studio 2012\Projects\CMTest\CMTest\obj\Debug\CMTest.pdb

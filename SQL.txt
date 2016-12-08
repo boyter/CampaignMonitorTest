@@ -1,0 +1,46 @@
+Requirement 9
+
+First answer:
+
+SELECT DISTINCT salp.[Name] from Salesperson salp
+INNER JOIN Orders orde ON orde.[SalespersonID] = salp.[SalespersonID]
+INNER JOIN Customer cust ON cust.[CustomerID] = orde.[CustomerID]
+WHERE cust.Name = 'George'
+ORDER BY 1;
+
+Second answer:
+
+SELECT DISTINCT salp.[Name] from Salesperson salp
+INNER JOIN Orders orde ON orde.[SalespersonID] = salp.[SalespersonID]
+INNER JOIN Customer cust ON cust.[CustomerID] = orde.[CustomerID]
+WHERE cust.Name != 'George'
+ORDER BY 1;
+
+Third answer:
+
+SELECT salp.[Name] 
+FROM Salesperson salp
+INNER JOIN 
+(
+	SELECT SalespersonID, COUNT(*) AS SaleCount FROM Orders 
+	GROUP BY SalespersonID HAVING COUNT(*) > 1
+) AS sales
+ON sales.SalespersonID = salp.SalespersonID
+ORDER BY 1;
+
+
+Requirement 10
+
+First answer:
+
+-- N.B. Only works on SQL Server 2012 or above
+SELECT salp.[Name] FROM Salesperson salp
+ORDER BY salp.Salary DESC
+OFFSET 2 ROWS
+FETCH NEXT 1 ROWS ONLY;
+
+Second answer:
+
+
+
+Third answer:
